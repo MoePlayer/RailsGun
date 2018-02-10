@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DanmukusControllerTest < ActionDispatch::IntegrationTest
+class DanmakuTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

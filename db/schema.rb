@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180209022854) do
 
-  create_table "danmukus", force: :cascade do |t|
+  create_table "danmakus", force: :cascade do |t|
     t.string "author"
     t.string "color"
     t.string "player"

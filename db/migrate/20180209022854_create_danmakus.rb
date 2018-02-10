@@ -1,6 +1,6 @@
-class CreateDanmukus < ActiveRecord::Migration[5.1]
+class CreateDanmakus < ActiveRecord::Migration[5.1]
   def change
-    create_table :danmukus do |t|
+    create_table :danmakus do |t|
       t.string   :author
       t.string   :color
       t.string   :player

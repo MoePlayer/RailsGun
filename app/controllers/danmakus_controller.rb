@@ -1,6 +1,6 @@
-class DanmukusController < ApplicationController
+class DanmakusController < ApplicationController
   def index
-    @danmus = Danmuku.all
+    @danmus = Danmaku.all
 
     #debugger
 
@@ -10,19 +10,19 @@ class DanmukusController < ApplicationController
   end
 
   def index2
-    @danmukus = Danmuku.all
+    @danmakus = Danmaku.all
 
     #debugger
     @items = Array['time', 'type', 'color', 'author','text']
 
     @danmus = Array.new
-    @danmu = Hash.new
 
-    @danmukus.each_with_index do |danmuku, index|
-    #debugger
+    @danmakus.each_with_index do |danmaku, index|
+      #debugger
+      @danmu = Hash.new
       @items.each_with_index do |item, item_index|
 
-        @danmu[item_index] = danmuku[item]
+        @danmu[item_index] = danmaku[item]
         if (item == 'type')
           @danmu[item_index] = 0
         end
@@ -37,7 +37,7 @@ class DanmukusController < ApplicationController
   end
 
   def create
-    @danmu = Danmuku.new(params.permit(:author, :color, :player, :text, :time, :type))
+    @danmu = Danmaku.new(params.permit(:author, :color, :player, :text, :time, :type))
     #debugger
     #@danmu = Danmuku.new(params[:post])
     #@danmu.danmu_type = params[:type]
