@@ -6,12 +6,16 @@ class DanmakusController < ApplicationController
 
     render json: {
       code: 0,
-      danmaku: @danmakus}
+      danmaku: @danmakus
+    }
   end
 
   def index2
-    #@danmakus = Danmaku.all
-    @danmakus = danmakuv2(Danmaku.all)
+
+    #item =  Array["player" => params.permit(:id)['id']]
+    #debugger
+    #@danmakus = danmakuv2(Danmaku.all)
+    @danmakus = danmakuv2(Danmaku.where("player = ?", params[:id]))
     render json: {
       code: 0,
       danmaku: @danmakus
