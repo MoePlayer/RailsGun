@@ -3,22 +3,63 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+## System dependencies
+* Ruby version 2.5.0
 
-* Ruby version
+* Rails version 5.1.4
 
-* System dependencies
+* Dplayer >= v1.21.2
+
+```bash
+bundle install
+```
 
 * Configuration
+```bash
+vim config/database.yml
+```
 
 * Database creation
+```bash
+rake db:migrate
+```
 
-* Database initialization
+* Test run
+```bash
+rails server
+```
+## Danmaku API
+>Only support dplayer v2 interface
 
-* How to run the test suite
+```JavaScript
+var dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    screenshot: true,
+    video: {
+        url: 'demo.mp4',
+        pic: 'demo.jpg',
+        thumbnails: 'thumbnails.jpg'
+    },
+    subtitle: {
+        url: 'webvtt.vtt'
+    },
+    danmaku: {
+        id: 'demo',
+        api: 'http://localhost:3000/dplayer/'
+    }
+});
 
-* Services (job queues, cache servers, search engines, etc.)
+```
 
-* Deployment instructions
 
-* ...
+
+## TodoList
+* [ ] Database initialization
+
+* [ ] How to run the test suite
+
+* [ ] Services (job queues, cache servers, search engines, etc.)
+
+* [ ] Deployment instructions
+
+* [ ] ...
