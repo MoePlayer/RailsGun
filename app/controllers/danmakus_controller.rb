@@ -25,6 +25,9 @@ class DanmakusController < ApplicationController
   def create
     @danmaku = Danmaku.new(params.permit(:author, :color, :player, :text, :time, :type))
     #debugger
+    @danmaku.ip = request.remote_ip
+    @danmaku.referer = request.env["HTTP_REFERER"]
+
     #@danmu = Danmuku.new(params[:post])
     #@danmu.danmu_type = params[:type]
     @danmaku.save

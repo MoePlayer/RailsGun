@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 20180209022854) do
     t.string "color"
     t.string "player"
     t.string "text"
+    t.string "ip"
+    t.string "referer"
     t.float "time"
     t.string "type"
     t.datetime "created_at", null: false
