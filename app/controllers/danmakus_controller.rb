@@ -40,13 +40,13 @@ class DanmakusController < ApplicationController
   def danmakuv2(danmakus)
 
     #debugger
-    items = Array['time', 'type', 'color', 'author','text']
+    items = ['time', 'type', 'color', 'author','text']
 
-    typeMap = Hash[
+    typeMap = {
       "right" => 0,
       "top" => 1,
       "bottom" => 2
-    ]
+    }
 
     danmus = Array.new
 

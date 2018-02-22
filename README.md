@@ -8,7 +8,7 @@ application up and running.
 
 * Rails version 5.1.4
 
-* Dplayer >= v1.21.2
+* Dplayer >= v1.22.1
 
 ```bash
 bundle install
