@@ -1,7 +1,7 @@
-# README
+RailsGun
+=====
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://travis-ci.org/MoePlayer/RailsGun.svg?branch=master)](https://travis-ci.org/MoePlayer/RailsGun)
 
 ## System dependencies
 * Ruby version 2.5.0
@@ -9,6 +9,8 @@ application up and running.
 * Rails version 5.1.4
 
 * Dplayer >= v1.22.1
+
+## Install && Run
 
 ```bash
 bundle install
@@ -28,6 +30,13 @@ rake db:migrate
 ```bash
 rails server
 ```
+
+## TestUnit
+
+```sh
+rails test
+```
+
 ## Danmaku API
 >Only support dplayer v2 interface
 
@@ -51,12 +60,10 @@ var dp = new DPlayer({
 
 ```
 
-
-
 ## TodoList
-* [ ] Database initialization
+* [x] Database initialization
 
-* [ ] How to run the test suite
+* [x] How to run the test suite
 
 * [ ] Services (job queues, cache servers, search engines, etc.)
 
