@@ -6,3 +6,5 @@ services:
 rvm:
   - 2.5.0
 
+before_script:
+  - psql -c 'create database railsgun_test;' -U postgres
