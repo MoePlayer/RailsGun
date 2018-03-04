@@ -10,6 +10,8 @@ RailsGun
 
 * Dplayer >= v1.22.1
 
+* PostgreSQL
+
 ## Install && Run
 
 ```bash
@@ -22,8 +24,8 @@ vim config/database.yml
 ```
 
 * Database creation
-```bash
-rake db:migrate
+```sh
+rake db:setup
 ```
 
 * Test run
