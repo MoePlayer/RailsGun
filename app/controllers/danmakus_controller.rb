@@ -28,13 +28,22 @@ class DanmakusController < ApplicationController
     @danmaku.ip = request.remote_ip
     @danmaku.referer = request.env["HTTP_REFERER"]
 
-    #@danmu = Danmuku.new(params[:post])
-    #@danmu.danmu_type = params[:type]
-    @danmaku.save
-    render json: {
-      code: 0,
-      data: @danmaku
-    }
+    #debugger
+    code, msg = post_filter
+
+    debugger
+    if code
+      @danmaku.save
+      render json: {
+        code: 0,
+        data: @danmaku
+      }
+    else
+      render json: {
+        code: -2,
+        msg: "Rejected for frequent operation."
+      }
+    end
   end
 
   def danmakuv2(danmakus)
@@ -65,6 +74,21 @@ class DanmakusController < ApplicationController
     end
 
     return danmus
+  end
+
+  def post_filter
+    # check black ip
+#   {"code": -1, "msg": "Rejected for black ip."}
+#
+    # frequency limitation
+    if Danmaku.last.ip == request.remote_ip
+      if Time.now - Danmaku.last.created_at < 1
+        #debugger
+        return -2, "Rejected for frequent operation."
+      end
+    end
+
+    return 1
   end
 
 end
