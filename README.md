@@ -10,7 +10,7 @@ RailsGun
 
 * Dplayer >= v1.22.1
 
-* PostgreSQL
+* PostgreSQL >=9.4
 
 ## Install && Run
 
@@ -61,6 +61,16 @@ var dp = new DPlayer({
 });
 
 ```
+
+## Test Server Address
+
+> The stability of the Barrage data is not currently used with caution
+
+> 目前不保证弹幕数据的稳定性 慎用!
+
+http://api.22333.fun/dplayer/
+
+
 
 ## TodoList
 * [x] Database initialization
