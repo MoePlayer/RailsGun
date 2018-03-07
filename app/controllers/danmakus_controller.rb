@@ -29,10 +29,11 @@ class DanmakusController < ApplicationController
     @danmaku.referer = request.env["HTTP_REFERER"]
 
     #debugger
+    code = 1
     code, msg = post_filter
 
-    debugger
-    if code
+    #debugger
+    if code == 1
       @danmaku.save
       render json: {
         code: 0,
@@ -40,8 +41,8 @@ class DanmakusController < ApplicationController
       }
     else
       render json: {
-        code: -2,
-        msg: "Rejected for frequent operation."
+        code: code,
+        msg: msg
       }
     end
   end

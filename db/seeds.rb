@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Danmaku.create({"author"=>"a-wing", "color"=>"#fff", "player"=>"demo", "text"=>"test danmaku", "time"=>0, "type"=>"right"})
