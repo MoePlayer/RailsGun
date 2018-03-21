@@ -38,4 +38,4 @@ production:
   #database: db/production.sqlite3
   database: railsgun
   username: postgres # <== Change me!!
-  password: password # <== Change me too!
+  password: <%= ENV['POSTGRESQL_DATABASE_PASSWORD'] %>

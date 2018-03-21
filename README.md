@@ -33,6 +33,18 @@ rake db:setup
 rails server
 ```
 
+* production
+```sh
+export RAILS_ENV=production
+export POSTGRESQL_DATABASE_PASSWORD=............
+export SECRET_KEY_BASE=...............
+
+# start railsgun in daemon
+rails server -d
+```
+
+
+
 ## TestUnit
 
 ```sh

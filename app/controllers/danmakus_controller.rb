@@ -1,8 +1,6 @@
 class DanmakusController < ApplicationController
-  def index
+  def test
     @danmakus = Danmaku.all
-
-    #debugger
 
     render json: {
       code: 0,
@@ -10,11 +8,7 @@ class DanmakusController < ApplicationController
     }
   end
 
-  def index2
-
-    #item =  Array["player" => params.permit(:id)['id']]
-    #debugger
-    #@danmakus = danmakuv2(Danmaku.all)
+  def index
     @danmakus = danmakuv2(Danmaku.where("player = ?", params[:id]))
     render json: {
       code: 0,
@@ -28,7 +22,6 @@ class DanmakusController < ApplicationController
     @danmaku.ip = request.remote_ip
     @danmaku.referer = request.env["HTTP_REFERER"]
 
-    #debugger
     code = 1
     code, msg = post_filter
 
