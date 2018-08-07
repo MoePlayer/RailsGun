@@ -4,13 +4,12 @@ RailsGun
 [![Build Status](https://travis-ci.org/MoePlayer/RailsGun.svg?branch=master)](https://travis-ci.org/MoePlayer/RailsGun)
 
 ## System dependencies
-* Ruby version 2.5.0
+* Ruby version >=2.5.0
 
-* Rails version 5.1.4
+* Rails version 5.2.0
 
-* Dplayer >= v1.22.1
+* Dplayer >= v1.22.0
 
-* PostgreSQL >=9.4
 
 ## Install && Run
 
@@ -36,7 +35,6 @@ rails server
 * production
 ```sh
 export RAILS_ENV=production
-export POSTGRESQL_DATABASE_PASSWORD=............
 export SECRET_KEY_BASE=...............
 
 # start railsgun in daemon
@@ -80,7 +78,7 @@ var dp = new DPlayer({
 
 > 目前不保证弹幕数据的稳定性 慎用!
 
-http://api.22333.fun/dplayer/
+~~http://api.22333.fun/dplayer/~~
 
 
 
